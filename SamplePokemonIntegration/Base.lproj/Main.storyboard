@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SamplePokemonIntegration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8m-f0-kfs">
+                                <rect key="frame" x="32" y="420" width="350" height="56"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Yyz-Mk-dTp">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="56"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="OxC-9G-h3n"/>
+                                        </connections>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0o-b4-41z">
+                                        <rect key="frame" x="302" y="13" width="48" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IkP-Mw-jrh"/>
+                                        </constraints>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <action selector="goAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8YR-G9-HMl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="BwB-QT-45O"/>
+                                    <constraint firstItem="n0o-b4-41z" firstAttribute="leading" secondItem="Yyz-Mk-dTp" secondAttribute="trailing" constant="1" id="IDC-Xy-pZv"/>
+                                    <constraint firstItem="n0o-b4-41z" firstAttribute="centerY" secondItem="C8m-f0-kfs" secondAttribute="centerY" id="QNs-jP-ZGI"/>
+                                    <constraint firstAttribute="height" constant="56" id="VJp-WA-bML"/>
+                                    <constraint firstAttribute="trailing" secondItem="n0o-b4-41z" secondAttribute="trailing" id="cgb-Va-uG4"/>
+                                    <constraint firstItem="Yyz-Mk-dTp" firstAttribute="leading" secondItem="C8m-f0-kfs" secondAttribute="leading" id="pco-m3-kiV"/>
+                                    <constraint firstItem="Yyz-Mk-dTp" firstAttribute="centerY" secondItem="C8m-f0-kfs" secondAttribute="centerY" id="qNI-HS-avP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C8m-f0-kfs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GAe-12-0mk"/>
+                            <constraint firstItem="C8m-f0-kfs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZvM-U2-YMd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="n0o-b4-41z" id="QHt-BI-Ruu"/>
+                        <outlet property="searchBar" destination="Yyz-Mk-dTp" id="7UG-0p-ZTk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
